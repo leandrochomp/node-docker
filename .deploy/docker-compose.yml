@@ -1,0 +1,13 @@
+version: "3"
+services:
+  node:
+    image: node:17-alpine3.12
+    entrypoint: '/bin/sh -c'
+    env_file: .env
+    build: .
+    working_dir: /work
+    # volumes:
+    #   - ./..:/work
+    ports:
+      - 8080:3000
+    restart: always
