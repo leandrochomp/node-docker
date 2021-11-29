@@ -31,8 +31,9 @@ make init
 make install
 ```
 
-After make install, open your browser into htpp://localhost:8080
+After make install, open your browser into http://localhost:8080
 
 References:
 [Auth0 Blog](https://auth0.com/blog/use-docker-to-create-a-node-development-environment/#-a-class--toc-target--id--creating-the-project-foundation----a-Creating-the-Project-Foundation)
+
 [Fireship.io](https://fireship.io/lessons/docker-basics-tutorial-nodejs/)
