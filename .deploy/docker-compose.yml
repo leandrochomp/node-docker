@@ -1,7 +1,7 @@
 version: "3"
 services:
-  web:
-    image: "node:17-alpine3.12"
+  express:
+    image: node-docker:latest
     entrypoint: '/bin/sh -c'
     build: .
     working_dir: /work
@@ -9,4 +9,19 @@ services:
       - ./../src:/work
     ports:
       - 8080:3000
+    restart: always
+  shell:
+    image: node-docker:latest
+    entrypoint: '/bin/sh'
+    working_dir: /work 
+    volumes:
+      - ./../src:/work
+  server:
+    image: node-docker:latest
+    entrypoint: '/bin/sh -c'
+    working_dir: /work
+    volumes:
+      - ./../src:/work
+    ports:
+      - 3000:8080
     restart: always
